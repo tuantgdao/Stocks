@@ -9,7 +9,7 @@ def updateTicker(ticker):
     stock = yf.Ticker(ticker)
     data = stock.history(period='1d', interval='1d')
     json = serializer.dataToJson(data)
-    printer.prettyPrint(json)
+    return json
 
 def updateAllTickers(tickers):
     tickersString = ' '.join([ticker[0] for ticker in tickers])

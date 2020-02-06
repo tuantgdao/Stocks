@@ -1,6 +1,8 @@
 FROM python
-ENV PYTHONPATH=$PYTHONPATH:/testService/Stocks
 COPY . /testService
 WORKDIR /testService
+ENV PYTHONPATH /testService
+ENV FLASK_APP index.py
+ENV FLASK_RUN_HOST 0.0.0.0
 RUN pip install -r requirements.txt
-CMD sh
+CMD ["flask", "run"]
