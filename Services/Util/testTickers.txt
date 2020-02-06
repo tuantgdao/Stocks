@@ -1,0 +1,4 @@
+AAPL	Apple Inc
+TSLA	Tesla Inc
+MSFT	Microsoft Corp
+AMD	Adv Micro Devices
