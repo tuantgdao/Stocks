@@ -1,11 +1,12 @@
 import json
 
-def dataToJson(data) :
+def dataToJson(data, ticker) :
     dataStr = str(data)
     dataObj = dataStr.split()
     startIndex = 9
     lineInterval = 6
     dataJson = {}
+    output = {}
     while startIndex < len(dataObj):
         comp = dataObj[startIndex:startIndex+lineInterval]
         dataJson[comp[0]] = {
@@ -16,8 +17,8 @@ def dataToJson(data) :
             'volume' : comp[5]
         }
         startIndex = startIndex+lineInterval + 2
-    dataJson = json.dumps(dataJson)
-    return dataJson
+    output[ticker] = dataJson
+    return json.dumps(output)
 
 def massSerialize(data):
     print(data)

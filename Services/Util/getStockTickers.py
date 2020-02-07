@@ -15,7 +15,7 @@ import webbrowser
 # print(html.fromstring(r.text))
 
 def getStockTickers():
-    stockTickers = open("./testTickers.txt", "r")
+    stockTickers = open("Services/Util/testTickers.txt", "r")
     stockList = list()
     for stock in stockTickers.readlines():
         stock = stock.strip('\n')

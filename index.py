@@ -10,4 +10,7 @@ def hello():
 @app.route('/updateTicker')
 def updateTicker():
     ticker = request.args.get('ticker')
-    return update.updateTicker(ticker)
+    if ticker == "all":
+        return update.updateAllTickers()
+    else:
+        return update.updateTicker(ticker)

@@ -46,10 +46,11 @@
 - [x] SQL vs NoSQL for DB?
     NoSQL to learn
 - [x] Service to get a list of all stock tickers
-    http://www.eoddata.com/stocklist/NASDAQ/M.htm
+    ftp://ftp.nasdaqtrader.com/symboldirectory/
     - [ ] Have to create a service to check this and update it on Saturdays
+    - [ ] Delta service to get list of tickers already in db and get list of tickers from that website to only create new entries
 - [ ] Build a service to update histories on Saturdays
-    - [ ] Once the data's in the db, updating the db is as easy as adding a new entry
+    - [ ] chronjob
 - [ ] Create json serializer for parsing results from yfinance
-- [ ] Setup a docker instance to execute the scripts
-    - [ ] Setup the service in docker
+- [x] Setup a docker instance to execute the scripts
+    - [x] Setup the service in docker
